@@ -1,0 +1,62 @@
+.container {
+  padding-top: 24px;
+  width: 60%;
+  margin: auto;
+
+  p {
+    padding: 16px 0;
+  }
+}
+
+.carousel {
+  width: 100%;
+  margin: auto;
+  margin-top: 24px;
+
+  div {
+    h2 {
+      color: #260b01;
+    }
+
+    img {
+      width: 100%;
+      height: 400px;
+    }
+  }
+}
+
+.about {
+  margin-top: 48px;
+}
+
+.aboutTitle {
+  text-align: center;
+  color: white;
+  background-color: #260b01;
+  margin-bottom: 24px;
+}
+
+.card {
+  width: 100%;
+}
+
+.aboutPicture {
+  max-height: 425px;
+}
+
+.contact {
+ margin-top: 24px;
+}
+
+.contactTitle {
+  background-color: #260b01;
+  margin-bottom: 24px;
+  color: #fcee21;
+  text-align: center;
+}
+
+.grid {
+  width: 100%;
+  margin: auto;
+  background-color: #F2F2F2 ;
+}
