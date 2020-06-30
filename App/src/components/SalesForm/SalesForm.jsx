@@ -5,7 +5,7 @@ import Paper from "@material-ui/core/Paper";
 
 import { DataContext } from "../../context/DataContext";
 import CustomForm from "../CustomForm";
-import sendEmailToUser from '../../mailSender';
+import sendMailToUser from '../../mailSender';
 import { getInitialValues, formFields, validationSchema } from "./formParams";
 
 import styles from "./SalesForm.module.scss";
@@ -17,7 +17,7 @@ const SalesForm = () => {
 
   const handleSubmit = async (values) => {
     changeData(values);
-    sendEmailToUser(values);
+    await sendMailToUser(values);
     history.push("/delivery");
   };
 
