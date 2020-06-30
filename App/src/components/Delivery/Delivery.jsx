@@ -14,7 +14,6 @@ import Paper from "@material-ui/core/Paper";
 
 import styles from "./Delivery.module.scss";
 import { Typography } from "@material-ui/core";
-// import { Typography } from "@material-ui/core";
 
 const Delivery = () => {
   const { data } = useContext(DataContext);

@@ -9,7 +9,7 @@ class Routing extends MapLayer {
     let leafletElement = L.Routing.control({
       waypoints: [
         L.latLng(coords.lat, coords.lng),
-        L.latLng(userLocation.userLatitude, userLocation.userLongitude),
+        L.latLng(userLocation.lat, userLocation.lng),
       ],
       lineOptions: {
         styles: [

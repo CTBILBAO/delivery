@@ -5,7 +5,6 @@ const apiClient = axios.create({
 });
 
 const sendMailToUser = (values) => {
-  console.log('sendMail AXIOS values params => ', values);
   return apiClient
     .post("/send/mail", values)
     .then((value) => value)
