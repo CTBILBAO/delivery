@@ -15,6 +15,9 @@ const AppRoutes = () => (
     <Route exact path="/delivery">
       <Delivery />
     </Route>
+    <Route exact path="/products">
+      <Main />
+    </Route>
     <Route exact path="/">
       <Home />
     </Route>

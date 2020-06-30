@@ -10,7 +10,6 @@ const CustomMap = ({ userLocation, store, coords }) => {
   const storeCoords = [coords.lat, coords.lng];
 
   const saveMap = (value) => {
-    console.log("dsjkahdjakshdaskj => ", value);
     setLMap(value);
   };
 

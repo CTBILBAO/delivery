@@ -22,6 +22,8 @@ const SalesForm = () => {
   const initialValues = getInitialValues(id);
 
   return (
+    <>
+    <div className={styles.top}></div>
     <Paper elevation={3} className={styles.paper}>
       <div className={styles.container}>
         <CustomForm
@@ -36,6 +38,7 @@ const SalesForm = () => {
         />
       </div>
     </Paper>
+    </>
   );
 };
 

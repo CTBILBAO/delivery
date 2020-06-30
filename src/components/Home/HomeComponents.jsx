@@ -8,7 +8,6 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import PhoneIcon from "@material-ui/icons/Phone";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import MailIcon from "@material-ui/icons/Mail";
 
 import styles from "./Home.module.scss";
 
@@ -89,7 +88,7 @@ const Contact = () => {
       <Typography variant='h4' className={styles.contactTitle}>Contactanos</Typography>
       <Grid container spacing={2}  alignItems='center' className={styles.grid}>
         <Grid container item xs={12} md={6} sm={6}>
-          <Grid container alignItems='right' item xs={12} md={6} sm={6} direction="column">
+          <Grid container alignItems='flex-start' item xs={12} md={6} sm={6} direction="column">
             <h4>Siguenos</h4>
             <div>
               <FacebookIcon /> <span>facebook</span>

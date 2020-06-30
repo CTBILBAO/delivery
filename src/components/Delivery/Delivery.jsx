@@ -15,9 +15,11 @@ const Delivery = () => {
   if (!data || !userLocation) return <Redirect to="/" />;
 
   return (
+    <>
+    <div className={styles.top}></div>
     <div className={styles.delivery}>
       <Typography>{data.store}</Typography>
-      <Typography>{data.persona}</Typography>
+      <Typography>{data.person}</Typography>
       {data && (
         <Map
           userLocation={userLocation}
@@ -26,6 +28,7 @@ const Delivery = () => {
         />
       )}
     </div>
+    </>
   );
 };
 
