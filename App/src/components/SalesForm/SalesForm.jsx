@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 
 import { DataContext } from "../../context/DataContext";
 import CustomForm from "../CustomForm";
+import sendEmailToUser from '../../mailSender';
 import { getInitialValues, formFields, validationSchema } from "./formParams";
 
 import styles from "./SalesForm.module.scss";
@@ -16,6 +17,7 @@ const SalesForm = () => {
 
   const handleSubmit = async (values) => {
     changeData(values);
+    sendEmailToUser(values);
     history.push("/delivery");
   };
 
@@ -27,7 +29,7 @@ const SalesForm = () => {
     <Paper elevation={3} className={styles.paper}>
       <div className={styles.container}>
         <CustomForm
-          title="Formulario de Adquisicion"
+          title="Formulario de Compra"
           initialValues={initialValues}
           fieldsArray={formFields}
           validationSchema={validationSchema}

@@ -24,8 +24,10 @@ const getproductName = (id) => {
 const getInitialValues = (id) => {
   const initialValues = {
     person: "",
+    person2: "",
+    dedicatory: "",
     phone: "",
-    address: "",
+    email: "",
     card: "",
     product: getproductName(id),
     valido: "",
@@ -37,11 +39,12 @@ const getInitialValues = (id) => {
 };
 
 const validationSchema = Yup.object({
-  person: Yup.string().required("Nombre completo es requerido"),
+  person: Yup.string().required("Nombre comprador es requerido"),
+  person2: Yup.string(),
   phone: Yup.number()
     .typeError("Telefono debe ser numerico")
     .required("Telefono requerido"),
-  address: Yup.string().required("Direccion requerida"),
+  email: Yup.string().email('Formato de correo incorrecto').required("Email requerido"),
   product: Yup.string().required(),
   card: Yup.number()
     .typeError("Tarjeta de Credito/Debito debe ser numerico")
@@ -57,24 +60,42 @@ const formFields = [
   {
     name: "person",
     type: "text",
-    label: "Nombre completo:",
+    label: "De:",
     required: true,
+    sm: 6,
+    md:6
+  },
+  {
+    name: "person2",
+    label: "Para:",
+    type: "text",
+    sm: 6,
+    md: 6,
+  },
+  {
+    name: "dedicatory",
+    label: "Mensaje de Tarjeta:",
+    type: "text",
+    rows: 3,
+    multiline: true,
     sm: 12,
+    md: 12,
   },
   {
     name: "phone",
     label: "Telefono:",
     type: "text",
     required: true,
-    sm: 12,
+    sm: 6,
+    md: 6,
   },
   {
-    name: "address",
-    label: "Direccion",
+    name: "email",
+    label: "Email",
     type: "text",
-    rows: 3,
     required: true,
-    sm: 12,
+    sm: 6,
+    md: 6,
   },
   {
     name: "product",
