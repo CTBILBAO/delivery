@@ -26,26 +26,26 @@ const SimpleSlider = () => {
       <Slider {...settings}>
         <div>
           <img
-            src="https://images.unsplash.com/photo-1519197207615-b8008aa988e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+            src="https://images.unsplash.com/photo-1455819413567-ef04b7e1fe3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
             alt="Flowers"
           />
         </div>
         <div>
           <img
-            src="https://images.unsplash.com/photo-1592500103581-5c3386dc0b3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+            src="https://images.unsplash.com/photo-1581264692613-6886eff81583?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
             alt="Using Technologies"
           />
         </div>
         <div>
           <img
-            src="https://images.unsplash.com/photo-1562840931-b8b53a1dbeb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-            alt="delivery boy"
+            src="https://images.unsplash.com/photo-1585781207753-00f54dc516af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            alt="Happy boy"
           />
         </div>
         <div>
           <img
-            src="https://images.unsplash.com/photo-1556228149-0b37a8638663?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
-            alt="happy girl"
+            src="https://images.unsplash.com/photo-1584355065676-322fec22cc54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=738&q=80"
+            alt="gifts"
           />
         </div>
       </Slider>
@@ -71,11 +71,55 @@ const About = () => {
         </Grid>
         <Grid container item xs={12} sm={6} md={6}>
           <Typography variant="body1">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-            impedit repellat, at nostrum quidem unde quos quia id cumque
-            voluptatum sint illo odit tempore, labore laborum ipsum soluta
-            voluptatibus voluptas!
+            Somos un grupo de profesionales dedicados a crear soluciones
+            innovadoras, inteligentes y fáciles, para “mejorar la forma de hacer
+            tus compras de regalos en línea”. Nos preocupamos por brindarte el
+            mejor servicio y la mejor experiencia de compra y envío de regalos
+            de ocasión. Queremos mejorar la forma en que nuestros clientes hacen
+            sus compras, simplificando su vida al tener la ventaja de comprar
+            desde su hogar, oficina o donde quiera que se encuentre.
           </Typography>
+        </Grid>
+      </Grid>
+    </div>
+  );
+};
+
+const Services = () => {
+  return (
+    <div className={styles.about}>
+      <Typography variant="h4" className={styles.aboutTitle}>
+        Servicios
+      </Typography>
+      <Grid container spacing={2}>
+        <Grid container item xs={12} sm={6} md={6}>
+          <Typography variant="h5">Programacion de envíos</Typography>
+          <Typography variant="body1">
+            Contamos con la opción de hacer la entrega de tu arreglo el mismo
+            día en que lo ordenes o lo puedes agendar para fechas posteriores si
+            así lo deseas. ¡Así no olvidarás ninguna fecha importante! .
+          </Typography>
+          <Typography variant="h5">Atención a clientes</Typography>
+          <Typography variant="body1">
+            Nuestros representantes siempre estarán al tanto de tu pedido
+            gracias a nuestro eficiente sistema de seguimiento y atención
+            telefónica y vía chat.
+          </Typography>
+          <Typography variant="h5">Garantía de calidad</Typography>
+          <Typography variant="body1">
+            En caso de que tu arreglo o regalo llegue dañado o incompleto
+            contáctanos lo antes posible haciéndonos llegar fotografías que
+            muestren la inconformidad.
+          </Typography>
+        </Grid>
+        <Grid container item xs={12} sm={6} md={6}>
+          <Card className={styles.card}>
+            <img
+              className={styles.aboutPicture}
+              src="https://images.unsplash.com/photo-1521790797524-b2497295b8a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"
+              alt="happy girl"
+            />
+          </Card>
         </Grid>
       </Grid>
     </div>
@@ -85,10 +129,20 @@ const About = () => {
 const Contact = () => {
   return (
     <div className={styles.contact}>
-      <Typography variant='h4' className={styles.contactTitle}>Contactanos</Typography>
-      <Grid container spacing={2}  alignItems='center' className={styles.grid}>
+      <Typography variant="h4" className={styles.contactTitle}>
+        Contactanos
+      </Typography>
+      <Grid container spacing={2} alignItems="center" className={styles.grid}>
         <Grid container item xs={12} md={6} sm={6}>
-          <Grid container alignItems='flex-start' item xs={12} md={6} sm={6} direction="column">
+          <Grid
+            container
+            alignItems="flex-start"
+            item
+            xs={12}
+            md={6}
+            sm={6}
+            direction="column"
+          >
             <h4>Siguenos</h4>
             <div>
               <FacebookIcon /> <span>facebook</span>
@@ -112,13 +166,13 @@ const Contact = () => {
           </Grid>
         </Grid>
         <Grid container item xs={12} md={6} sm={6}>
-        <Typography variant="body1">
-          © Todos los derechos reservados ctbilbao
-        </Typography>
+          <Typography variant="body1">
+            © Todos los derechos reservados ctbilbao
+          </Typography>
         </Grid>
       </Grid>
     </div>
   );
 };
 
-export { About, SimpleSlider, Contact };
+export { About, Services, SimpleSlider, Contact };

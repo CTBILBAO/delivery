@@ -1,9 +1,9 @@
 import React from "react";
 
-import { SimpleSlider, About, Contact } from "./HomeComponents";
+import { SimpleSlider, Services, About, Contact } from "./HomeComponents";
 import { Typography } from "@material-ui/core";
 
-import styles from './Home.module.scss';
+import styles from "./Home.module.scss";
 
 const Home = () => {
   return (
@@ -12,11 +12,14 @@ const Home = () => {
         Bienvenidos a "Regalos Forever and Ever"
       </Typography>
       <Typography variant="body1">
-        Regalos y mucho más, solo debe seleccionar el regalo ideal y nosotros
-        nos encargamos de hacercelo llegar
+        En Regalos Forever And Ever garantizamos que cada compra que realices
+        sera un proceso seguro y sencillo, de principio a fin. Navega en nuestro
+        Sitio Web selecciona el producto ideal y nosotros nos encargamos de
+        hacerlo llegar.
       </Typography>
       <SimpleSlider />
       <About />
+      <Services />
       <Contact />
     </div>
   );

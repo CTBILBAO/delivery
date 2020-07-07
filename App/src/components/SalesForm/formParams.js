@@ -26,14 +26,17 @@ const getInitialValues = (id) => {
     person: "",
     person2: "",
     dedicatory: "",
-    phone: "",
+    phoneOrigin: "",
+    phoneDestiny:"",
     email: "",
+    date: `${new Date()}`,
     card: "",
     product: getproductName(id),
     valido: "",
     store: getTienda(id),
     price: `${getPrice(id)} Bs.-`,
     storeLocation: getStoreCoords(id),
+    nit: "",
   };
   return initialValues;
 };
@@ -41,10 +44,14 @@ const getInitialValues = (id) => {
 const validationSchema = Yup.object({
   person: Yup.string().required("Nombre comprador es requerido"),
   person2: Yup.string(),
-  phone: Yup.number()
+  phoneOrigin: Yup.number()
     .typeError("Telefono debe ser numerico")
-    .required("Telefono requerido"),
-  email: Yup.string().email('Formato de correo incorrecto').required("Email requerido"),
+    .required("Telefono comprador requerido"),
+  phoneDestiny: Yup.number()
+    .typeError("Telefono debe ser numerico"),
+  email: Yup.string()
+    .email("Formato de correo incorrecto")
+    .required("Email requerido"),
   product: Yup.string().required(),
   card: Yup.number()
     .typeError("Tarjeta de Credito/Debito debe ser numerico")
@@ -54,6 +61,9 @@ const validationSchema = Yup.object({
   ),
   store: Yup.string().required(),
   price: Yup.string().required(),
+  nit: Yup.number()
+    .typeError("Nit debe ser numerico")
+    .required("Nit es requerido"),
 });
 
 const formFields = [
@@ -63,7 +73,7 @@ const formFields = [
     label: "De:",
     required: true,
     sm: 6,
-    md:6
+    md: 6,
   },
   {
     name: "person2",
@@ -82,20 +92,34 @@ const formFields = [
     md: 12,
   },
   {
-    name: "phone",
-    label: "Telefono:",
+    name: "phoneOrigin",
+    label: "Telefono Remitente :",
     type: "text",
     required: true,
-    sm: 6,
-    md: 6,
+    sm: 3,
+    md: 3,
+  },
+  {
+    name: "phoneDestiny",
+    label: "Telefono Destinatario :",
+    type: "text",
+    sm: 3,
+    md: 3,
   },
   {
     name: "email",
     label: "Email",
     type: "text",
     required: true,
-    sm: 6,
-    md: 6,
+    sm: 3,
+    md: 3,
+  },
+  {
+    name: "date",
+    label: "Fecha de Entrega",
+    type: "date",
+    sm: 3,
+    md: 3,
   },
   {
     name: "product",
@@ -129,16 +153,24 @@ const formFields = [
     label: "Numero de Tarjeta:",
     type: "text",
     required: true,
-    sm: 6,
-    md: 6,
+    sm: 4,
+    md: 4,
   },
   {
     name: "valido",
-    label: "Valido hasta:",
+    label: "Tarjeta valido hasta:",
     type: "text",
     required: true,
-    sm: 6,
-    md: 6,
+    sm: 4,
+    md: 4,
+  },
+  {
+    name: "nit",
+    label: "Nit facturación:",
+    type: "text",
+    required: true,
+    sm: 4,
+    md: 4,
   },
 ];
 
