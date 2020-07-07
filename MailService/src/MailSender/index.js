@@ -49,8 +49,8 @@ const sendEmailToUser = (data) => {
           <tr style="border: 1px solid black">
             <td><strong>Cliente:</strong></td>
             <td>${data.person}</td>
-            <td><strong>Destinatario:</strong></td>
-            <td>${data.person1}</td>
+            <td><strong>Nit:</strong></td>
+            <td>${data.nit}</td>
             <td><strong>Telefono Referencia:</strong></td>
             <td>${data.phoneOrigin}</td>
           </tr>
