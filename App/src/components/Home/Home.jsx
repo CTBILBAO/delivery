@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SimpleSlider, Services, About, Contact } from "./HomeComponents";
+import { SimpleSlider, Services, About, Contact, Covid } from "./HomeComponents";
 import { Typography } from "@material-ui/core";
 
 import styles from "./Home.module.scss";
@@ -18,6 +18,7 @@ const Home = () => {
         hacerlo llegar.
       </Typography>
       <SimpleSlider />
+      <Covid />
       <About />
       <Services />
       <Contact />

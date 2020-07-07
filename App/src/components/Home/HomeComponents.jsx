@@ -126,6 +126,37 @@ const Services = () => {
   );
 };
 
+const Covid = () => {
+  return (
+    <div className={styles.about}>
+      <Typography variant="h4" className={styles.aboutTitle}>
+        Quedate en Casa!
+      </Typography>
+    <Grid container>
+      <Grid Container item md={12} sm={12}>
+        <Card className={styles.covidCard}>
+          <img
+            className={styles.covid}
+            src="https://www.prensalibre.com/wp-content/uploads/2020/03/Instagram-En-Casa-1-1.jpeg?quality=82"
+            alt="happy girl"
+          />
+        </Card>
+      </Grid>
+      <Grid Container item md={12} sm={12}>
+        <Typography variant="body1">
+          Estimados clientes, ante la difícil situación que atravesamos por el
+          COVID-19, mantenemos nuestro compromiso de ofrecerles la mejor
+          experiencia de compra en línea, para asegurar la seguridad y salud de
+          nuestros clientes todos los productos ofertados, personal y servicio
+          delivery atraviesa por un minucioso proceso de desinfección durante
+          todo el procedimiento de la transferencia, para que podamos entregarle
+          su producto libre de cualquier agente infeccioso.
+        </Typography>
+      </Grid>
+    </Grid>
+    </div>
+  );
+};
 const Contact = () => {
   return (
     <div className={styles.contact}>
@@ -175,4 +206,4 @@ const Contact = () => {
   );
 };
 
-export { About, Services, SimpleSlider, Contact };
+export { About, Services, SimpleSlider, Contact, Covid };
