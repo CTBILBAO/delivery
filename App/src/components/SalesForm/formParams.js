@@ -84,7 +84,7 @@ const formFields = [
   },
   {
     name: "dedicatory",
-    label: "Mensaje de Tarjeta:",
+    label: "Dedicatoria:",
     type: "text",
     rows: 3,
     multiline: true,

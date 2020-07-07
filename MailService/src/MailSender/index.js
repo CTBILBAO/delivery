@@ -27,7 +27,7 @@ const sendEmailToUser = (data) => {
           <tr>
             <td>Producto:</td>
             <td>${data.product}</td>
-            <td>Precio:</td>
+            <td>Total:</td>
             <td>${data.price}</td>
           </tr>
           </tbody>
@@ -37,7 +37,45 @@ const sendEmailToUser = (data) => {
         <p>Gracias por su preferencia...</p>`,
   };
 
+  const mailOptions2 = {
+    from: "regalos.forever.ever@gmail.com",
+    subject: `Nuevo pedido de: ${data.person}`,
+    to: "regalos.forever.ever@gmail.com",
+    html: `
+        <h2>Nota de Venta</h2>
+        <h3>Detalle</h3>
+        <table style="width:90%; border: 1px solid black">
+        <tbody>
+          <tr style="border: 1px solid black">
+            <td><strong>Cliente:</strong></td>
+            <td>${data.person}</td>
+            <td><strong>Destinatario:</strong></td>
+            <td>${data.person1}</td>
+            <td><strong>Telefono Referencia:</strong></td>
+            <td>${data.phoneOrigin}</td>
+          </tr>
+          <tr style="border: 1px solid black">
+            <td><strong>Producto:</strong></td>
+            <td>${data.product}</td>
+            <td><strong>Precio:</strong></td>
+            <td>${data.price}</td>
+            <td><strong>Tienda:</strong></td>
+            <td>${data.store}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p>La presente transacción junto a todos los detalles serán impresos y se enviara el comprobante(factura) junto al servicio de delivery</p>`,
+  };
+
   transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+
+  transporter.sendMail(mailOptions2, function (error, info) {
     if (error) {
       console.log(error);
     } else {
